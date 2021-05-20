@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body>
+        <style>
+            img{
+                width: 400px;
+                margin-left: 570px;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+            }
+            h3{
+                text-align: center;
+                font-size: 30px;
+            }
+            button{
+                margin-left: 730px;
+                width:100px
+            }
+            body{
+                background-color: aqua;
+            }
+        </style>
+        <h1>My Family</h1>
+        <img id="img_of_family" src="https://www.linkpicture.com/q/IMG-20200110-WA0085.jpg">
+        <h3 id="names_of_family">My GrandMother - Geeta Sachdev</h3>
+        <button type="button" id="btn_1" onclick="update()">Next</button>
+        <script>
+            var images = ["https://www.linkpicture.com/q/IMG-20200110-WA0085.jpg","https://www.linkpicture.com/q/IMG-20200110-WA0086.jpg","https://www.linkpicture.com/q/IMG-20200103-WA0163.jpg","https://www.linkpicture.com/q/IMG-20200103-WA0149.jpg","https://www.linkpicture.com/q/IMG-20190305-WA0103-1-1.jpg","https://www.linkpicture.com/q/IMG-20190305-WA0105.jpg","https://www.linkpicture.com/q/IMG-20190128-WA0019.jpg","https://www.linkpicture.com/q/IMG-20190128-WA0001.jpg","https://www.linkpicture.com/q/IMG-20181123-WA0001-1.jpg","https://www.linkpicture.com/q/IMG-20170210-WA0005-1.jpg","https://www.linkpicture.com/q/IMG-20200413-WA0086_1.jpg","https://www.linkpicture.com/q/IMG-20201018-WA0004.jpg","https://www.linkpicture.com/q/IMG-20201209-WA0087_1.jpg"];
+
+            var names = ["My GrandMother","Karan Sachdev","My GrandFather - Anil Sachdev","My Uncle - Avneesh Sachdev","My Grandfather - Ashok Kumar Sachdev","My GrandMother -  Neelam Sachdev","My Father - Vikrant Sachdev","My Aunt - Gitika Sachdev","My Mother - Nitika Sachdev","My Aunt - Garima Sachdev","My Uncle - Ravit Sachdev","Upasana Sachdev","My Brothers","My Sister"];
+
+            var i = 0;
+            function update()
+            {
+                i++;
+                var number_of_family_members_in_array = 12;
+                if(i > number_of_family_members_in_array)
+                {
+                    i = 0;
+                }
+
+                var updatedImage = images[i];
+                var updatedName = names[i];
+                document.getElementById("img_of_family").src = updatedImage;
+                document.getElementById("names_of_family").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
